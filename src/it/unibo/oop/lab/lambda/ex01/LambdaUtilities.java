@@ -78,7 +78,7 @@ public final class LambdaUtilities {
 		 * Suggestion: consider Map.merge
 		 */
 		final Map<R, Set<T>> map = new HashMap<>();
-		list.forEach(t -> map.merge(null, null, null));
+		list.forEach(t -> map.merge(op.apply(t), null, null));
 		return null;
 	}
 
